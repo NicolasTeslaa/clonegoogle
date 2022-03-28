@@ -1,0 +1,186 @@
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+*, input, button{
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar  */
+.menu{
+    height: 60px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 20px;
+}
+/* sessões do menu  */
+.menu_section{
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    width: 228px;
+    height: 48px;
+   
+    
+}
+
+.more{
+    margin-left: 10px;
+}
+.menu_link.images{
+    padding-left: 15px;
+}
+
+/* All e Image*/
+.menu_link{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    color: #757575;
+    padding: 12px 8px;
+    text-decoration: none;
+}
+
+/*Links ativos utilizam esse estilo */
+.menu_link.active{
+    color:#4285f4;
+    border-bottom: 2px solid #4285f4;
+}
+/* Links não ativos ter bordas transparentes*/
+.menu_link:not(.active){
+    margin-bottom: 2px;
+}
+
+
+
+.menu_profile{
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+}
+
+.menu_avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    
+}
+
+/* Main */
+
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 56px 8px 0;
+    align-items: center;
+    flex: 1;
+}
+
+.content__logo{
+    height: 56px;
+}
+
+.content__search{
+    margin-top: 18px;
+    width: 100%;
+    max-width: 736px;
+    padding: 7px 10px 6px 20px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.87);
+    background:transparent;
+    border-radius: 25px;
+    border: 1px solid #dadce0;
+    outline: 0;
+}
+/* Se estiver pressiinado, deixar a borda laranja do SEARCH*/
+.content__search:focus{
+    border: 1px solid orange;
+}
+
+.content__offer{
+    margin-top: 24px;
+    font-size: 13px;
+    padding: 6px 12px;
+}
+
+.content__offer a{
+    text-align: none;
+    color:blue;
+}
+
+/* Barra de Pesquisa */
+
+.button a{
+    text-decoration: none;
+    color: #202124;
+
+}
+.bottonssearch{
+    padding: 18px;
+    display: flex;
+}
+
+.searchbotton{
+    padding: 0 16px;
+}
+
+
+
+
+
+/* Footer */
+
+.footer{
+    display: flex;
+    margin-top: 24px;
+    flex-direction: column;
+    background-color: #f2f2f2;
+}
+
+/* NOT FIRST CHILD, exclui o primeiro item da lista*/
+.footer__section:not(:first-child){
+    border-top: 1px solid #e4e4e4
+}
+
+.location{
+    font-size: 16px;
+    color: rgba(0,0,0,0.54);
+    padding: 10px 12px;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 13px;
+    color: #5f6368;
+    padding: 10px;
+}
+
+.links a:not(:first-child){
+    margin-left: 27px;
+
+}
+
+/* Media Query responsividade */
+@media(min-width: 763px){
+    .content{
+        padding-top: 120px;
+    }
+    .content__logo{
+        height: 92px;
+    }
+}
